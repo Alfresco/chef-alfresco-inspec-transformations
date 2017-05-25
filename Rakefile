@@ -3,7 +3,7 @@ require 'yamllint/rake_task'
 
 desc 'Runs cookstyle tests'
 task :cookstyle do
-  sh 'chef exec bundle exec cookstyle'
+  sh 'bundle exec cookstyle'
 end
 
 desc 'Runs yamllint checks'
