@@ -9,4 +9,4 @@ install:
 before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
 
 script:
-  - chef exec rake default
+  - bundle exec rake default
