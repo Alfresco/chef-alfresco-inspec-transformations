@@ -1,0 +1,12 @@
+rvm: 2.2
+
+sudo: required
+services: docker
+
+install:
+  - bundle
+
+before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
+
+script:
+  - bundle exec rake default
