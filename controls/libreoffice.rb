@@ -67,7 +67,7 @@ control 'Libreoffice installation' do
     it { should exist }
     it { should be_owned_by tomcatusr }
     it { should be_directory }
-    its('mode') { should cmp '02755' }
+    its('mode') { should cmp '02775' }
     its('group') { should eq tomcatusr }
   end
 
