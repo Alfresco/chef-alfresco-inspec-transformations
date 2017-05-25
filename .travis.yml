@@ -1,0 +1,12 @@
+rvm: 2.2
+
+sudo: required
+services: docker
+
+install:
+  - chef exec bundle
+
+before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
+
+script:
+  - chef exec rake default
